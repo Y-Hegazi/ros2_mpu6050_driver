@@ -31,5 +31,8 @@ Source setup.bash in your workspace:
     
 Launch it:
 
+    sudo usermod <user_name> -aG i2c
     ros2 launch mpu6050driver mpu6050driver_launch.py
+
+![circuit](pi_mpu6050.png)
 
