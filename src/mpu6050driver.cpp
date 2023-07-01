@@ -47,9 +47,11 @@ void MPU6050Driver::handleInput()
   message.linear_acceleration.y = mpu6050_->getAccelerationY();
   message.linear_acceleration.z = mpu6050_->getAccelerationZ();
   message.angular_velocity_covariance[0] = {0};
-  message.angular_velocity.x = mpu6050_->getAngularVelocityX();
-  message.angular_velocity.y = mpu6050_->getAngularVelocityY();
-  message.angular_velocity.z = mpu6050_->getAngularVelocityZ();
+  // convert angular velocity into rad/sec
+  double degree_to_rad = 0.0174533;
+  message.angular_velocity.x = mpu6050_->getAngularVelocityX() * degree_to_rad;
+  message.angular_velocity.y = mpu6050_->getAngularVelocityY() * degree_to_rad;
+  message.angular_velocity.z = mpu6050_->getAngularVelocityZ() * degree_to_rad;
   // Invalidate quaternion
   message.orientation_covariance[0] = -1;
   message.orientation.x = 0;
