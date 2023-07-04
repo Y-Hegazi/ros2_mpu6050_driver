@@ -12,9 +12,9 @@ Following other parameters and default values are listed here and can be changed
     gyro_range: 0
     accel_range: 0
     dlpf_bandwidth: 2
-    gyro_x_offset: 0.0 # [deg/s]
-    gyro_y_offset: 0.0 # [deg/s]
-    gyro_z_offset: 0.0 # [deg/s]
+    gyro_x_offset: 0.0 # [rad/s]
+    gyro_y_offset: 0.0 # [rad/s]
+    gyro_z_offset: 0.0 # [rad/s]
     accel_x_offset: 0.0 # [m/s²]
     accel_y_offset: 0.0 # [m/s²]
     accel_z_offset: 0.0 # [m/s²]
